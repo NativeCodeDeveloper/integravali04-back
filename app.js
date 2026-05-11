@@ -40,7 +40,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-
+// refleja el origin de la petición (permite cualquier origen)
 const corsConfig = {
     origin: true,           // refleja el origin de la petición (permite cualquier origen)
     credentials: true,      // permite envío de cookies; poner false si no quieres cookies
