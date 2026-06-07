@@ -13,7 +13,9 @@ class DataBase {
             port: Number(process.env.DB_PORT || 3306), // ahora se incluye el puerto
             waitForConnections: true,
             connectionLimit: Number(process.env.DB_POOL_LIMIT || 10),
-            queueLimit: 0
+            queueLimit: 0,
+            // DATE, TIME y DATETIME son valores locales del negocio, no instantes UTC.
+            dateStrings: true
         });
     }
 
