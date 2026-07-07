@@ -23,7 +23,7 @@ export default class ReservaPacienteController {
             if (respuestaBackend) {
                 return res.status(200).send({message: true});
             } else {
-                return res.status(404).send({message: false});
+                return res.status(200).send({message: false});
             }
 
         } catch (e) {
